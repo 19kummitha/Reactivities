@@ -38,8 +38,8 @@ export default function NavBar() {
               <MenuItemLink to="/activities">Activities</MenuItemLink>
               <MenuItemLink to="/createActivity">Create Activity</MenuItemLink>
             </Box>
+            <MenuItem>User menu</MenuItem>
           </Toolbar>
-          <MenuItem>User menu</MenuItem>
         </Container>
       </AppBar>
     </Box>
