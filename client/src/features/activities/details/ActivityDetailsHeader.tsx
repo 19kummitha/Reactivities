@@ -1,6 +1,7 @@
 import { Badge, Box, Button, Card, CardMedia, Typography } from "@mui/material";
 import { formatDate } from "../../../lib/util/util";
 import { Link } from "react-router-dom";
+import { Activity } from "../../../lib/types";
 
 type Props = {
   activity: Activity;
@@ -83,7 +84,7 @@ export default function ActivityDetailsHeader({ activity }: Props) {
                 variant="contained"
                 color="primary"
                 component={Link}
-                to={`/manage/activityId`}
+                to={`/manage/${activity.id}`}
                 disabled={isCancelled}
               >
                 Manage Event
