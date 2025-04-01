@@ -14,6 +14,7 @@ type Activity = {
   isHost: boolean;
   hostId: string;
   hostDisplayName: string;
+  hostImageUrl: string;
 };
 type Profile = {
   id: string;
@@ -26,6 +27,10 @@ type User = {
   email: string;
   displayName: string;
   imageUrl?: string;
+};
+type Photo = {
+  id: string;
+  url: string;
 };
 type LocationIQSuggestion = {
   place_id: string;
