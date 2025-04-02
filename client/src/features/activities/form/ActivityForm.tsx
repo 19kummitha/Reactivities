@@ -1,5 +1,4 @@
 import { Box, Button, Paper, Typography } from "@mui/material";
-
 import { useActivities } from "../../../lib/hooks/useActivities";
 import { useNavigate, useParams } from "react-router";
 import { useForm } from "react-hook-form";
@@ -53,7 +52,6 @@ export default function ActivityForm() {
         createActivity.mutate(flattenedData, {
           onSuccess: (id) => navigate(`/activities/${id}`),
         });
-        console.log({ activity });
       }
     } catch (error) {
       console.log(error);
@@ -99,7 +97,9 @@ export default function ActivityForm() {
         />
 
         <Box display="flex" justifyContent="end" gap={3}>
-          <Button color="inherit">Cancel</Button>
+          <Button color="inherit" onClick={() => navigate(-1)}>
+            Cancel
+          </Button>
           <Button
             type="submit"
             color="success"
